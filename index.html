@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Lab 3</title>
+  </head>
+  <body>
+    <header>
+      <h1>Алгоритмы компьютерной графики</h1>
+      <h2>Лабораторная работа №3</h2>
+    </header>
+
+    <div class="content">
+      <p>Original</p>
+      <canvas class="img"></canvas>
+      <input
+        accept="image/*"
+        type="file"
+        id="upload"
+        oninput="uploadImage(this.files[0])"
+      />
+      <div></div>
+      <canvas></canvas>
+
+      <p>Brightness</p>
+      <canvas class="img"></canvas>
+      <input type="range" name="" min="0" max="100" id="brightness" />
+      <button onclick="downloadImage('brightness')">Download</button>
+      <canvas></canvas>
+
+      <p>Saturation</p>
+      <canvas class="img"></canvas>
+      <input type="range" name="" min="0" max="100" id="saturation" />
+      <button onclick="downloadImage('saturation')">Download</button>
+      <canvas></canvas>
+
+      <p>Contrast</p>
+      <canvas class="img"></canvas>
+      <input type="range" name="" min="-100" max="100" id="contrast" />
+      <button onclick="downloadImage('contrast')">Download</button>
+      <canvas></canvas>
+    </div>
+  </body>
+</html>
